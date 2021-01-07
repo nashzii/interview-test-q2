@@ -1,0 +1,11 @@
+<label for="filter">filter</label>
+<input type="text" name="filter" id="filter" [(ngModel)]="filter" (ngModelChange)="filterChange()">
+<table>
+  <tbody>
+    <tr *ngFor="let c of categories$ | async">
+      <td>
+        {{c}}
+      </td>
+    </tr>
+  </tbody>
+</table>
